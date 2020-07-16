@@ -69,7 +69,7 @@
                 <a href="../naukaidydaktyka/skryptyimonografie.php">Skrypty i&nbspmonografie</a>
                 <a href="../naukaidydaktyka/konferencje.php">Konferencje</a>
                 <a href="../naukaidydaktyka/seminaria.php">Seminaria</a>
-                <a href="../tematykabadawcza.php">Tematyka badawcza</a>
+                <a href="../naukaidydaktyka/tematykabadawcza.php">Tematyka badawcza</a>
                 <a href="../naukaidydaktyka/projekty.php">Projekty</a>
             </div>
         </div>
