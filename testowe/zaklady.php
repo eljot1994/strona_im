@@ -6,7 +6,7 @@
     <title>Instytut Matematyki PP</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
 
 </head>
 
@@ -24,7 +24,7 @@
     </div>
     <div class="header">
         <div>
-            <img src="image/logo_IM.png" style="float: left; margin-left: 0px;" />
+            <img src="../image/logo_IM.png" style="float: left; margin-left: 0px;" />
         </div>
         <div >
             <h1 style="font-size: xx-large;">Instytut Matematyki</h1>
@@ -32,8 +32,8 @@
             <h2 style="font-size: large; ">Politechnika Poznańska</h2>
         </div>
         <div style="margin-left:auto; margin-right:0;">
-            <img class="logo" src="image/logo_WARiE.png" style=" width: 100px; margin-top:10px" />
-            <img class="logo" src="image/logo_PP.png" style="float: right;" />
+            <img class="logo" src="../image/logo_WARiE.png" style=" width: 100px; margin-top:10px" />
+            <img class="logo" src="../image/logo_PP.png" style="float: right;" />
         </div>
 
     </div>

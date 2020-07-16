@@ -1,2 +1,14 @@
 L4
 Pan cos jest gdzies
+
+
+
+ </div>
+
+    <?php
+    $file = fopen("aktualnosci.txt","r");
+    while(!feof($file)) {
+        echo fgets($file)."<br>";
+    }
+    fclose($file);
+    ?>
