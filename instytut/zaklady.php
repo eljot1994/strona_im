@@ -1,97 +1,420 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <title>Instytut Matematyki PP</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="shortcut icon" href="../image/logo_IM.png" />
     <link rel="icon" type="image/vnd.microsoft.icon" href="../image/logo_IM.png"/>
     <link rel="icon" type="image/x-icon" href="../image/logo_IM.png"/>
     <link rel="icon" href="../image/logo_IM.png" />
 </head>
-<body>
-<ul class="favnav">
-    <li style="float:left;"><a href="#"><img src="../image/flag_BG.png" style="height: 15px" alt="GB"/> </a></li>
-    <li style="float: left;"><a href="#"><img src="../image/flag_PL.png" style="height: 15px" alt="PL"/> </a> </li>
-    <li><a href="https://hellfire.put.poznan.pl/">VPN</a></li>
-    <li><a href="https://sin.put.poznan.pl/">SIN</a></li>
-    <li><a href="https://moodle.put.poznan.pl/">MoodlePP</a></li>
-    <li><a href="https://elogin.put.poznan.pl/">eLogin</a></li>
-    <li><a href="https://elogin.put.poznan.pl/email/">ePoczta</a></li>
-    <li><a href="https://www.put.poznan.pl/">PUT</a></li>
-</ul>
-<div class="header">
-    <div class="logo_IM">
-        <img src="../image/logo_IM.png" alt="Instytut Matematyki"/>
-    </div>
-    <div class="name_IM">
-        <h1 >Instytut Matematyki</h1>
-        <h3 >Wydział Automatyki, Robotyki i Elektrotechniki </h3>
-        <h3>Politechnika Poznańska</h3>
-    </div>
-    <div class="logo_PP_WARiE">
-        <img src="../image/logo_WARiE.png" alt="Wydział Automatyki, Robotyki i Elektrotechniki" style="width: 100px; margin-top: 20px"/>
-        <img src="../image/logo_PP.png" alt="Politechnika Poznańska"/>
-    </div>
-</div>
-<div class="menu">
-    <div class="primary_menu">
-        <div class="dropdown">
-            <button class="dropBtn" style="cursor: default; background-color: #00507b" >Instytut</button>
-            <div class="dropList">
-                <a href="../instytut/wladze.php">Władze</a>
-                <a href="../instytut/zaklady.php">Zakłady</a>
-                <a href="../instytut/historia.php">Historia</a>
-                <a href="../instytut/kontakt.php">Kontakt</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropBtn" style="cursor: default">Pracownicy</button>
-            <div class="dropList">
-                <a href="../pracownicy/skladosobowy.php">Skład osobowy</a>
-                <a href="../pracownicy/dyzuryikonsultacje.php">Dyżury i&nbspkonsultacje</a>
-                <a href="../pracownicy/planzajec.php">Plany zajęć</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropBtn" style="cursor: default;">Dla studentów</button>
-            <div class="dropList">
-                <a href="../dlastudentow/harmonogramy.php">Harmonogramy</a>
-                <a href="../dlastudentow/kierunekmatematykawtechnice.php">Kierunek&nbspMatematyka w&nbspTechnice</a>
-                <a href="../dlastudentow/przydatnepliki.php">Przydatne pliki</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropBtn" style="cursor: default">Nauka i dydaktyka</button>
-            <div class="dropList">
-                <a href="../naukaidydaktyka/tytulystopnienaukowe.php">Tytuły/Stopnie naukowe</a>
-                <a href="../naukaidydaktyka/skryptyimonografie.php">Skrypty i&nbspmonografie</a>
-                <a href="../naukaidydaktyka/konferencje.php">Konferencje</a>
-                <a href="../naukaidydaktyka/seminaria.php">Seminaria</a>
-                <a href="../naukaidydaktyka/tematykabadawcza.php">Tematyka badawcza</a>
-                <a href="../naukaidydaktyka/projekty.php">Projekty</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropBtn" onclick="location.href='../szkoleniaikursy.php'">Szkolenia i&nbspkursy</button>
-        </div>
-        <div class="dropdown">
-            <button class="dropBtn" onclick="location.href='../aktualnosci.php'">Aktualności</button>
-        </div>
-        <div class="dropdown">
-            <button class="dropBtn_fas" onclick="location.href='http://math.put.poznan.pl/fasciculi_m.htm'"><i>Fasciculi Mathematici</i></button>
-        </div>
-    </div>
-    <div class="secondary_menu">
-        <button class="dropBtn" onclick="location.href='wladze.php'" >Władze</button>
-        <button class="dropBtn" onclick="location.href='zaklady.php'" style="background-color: #fff;color: #00507b">Zakłady</button>
-        <button class="dropBtn" onclick="location.href='historia.php'" >Historia</button>
-        <button class="dropBtn" onclick="location.href='kontakt.php'" >Kontakt</button>
-    </div>
-</div>
+<script>
+    function goToTable(elementName){
+        document.getElementById(elementName).scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest"
+        });
+    }
+
+</script>
+<body onload="openPage('InstytutButton','secondary_menu_1','zakladyButton')">
+<?php include('../main/menu.php');?>
 <div class="content">
-Zakłady
+    <div class="grid-container">
+        <div class="grid-item"><table class="zakladTableButton" onclick="goToTable('Zaklad1')">
+                <tbody>
+                <tr>
+                    <td class="zakladTableSymbol" rowspan="2">Z1</td>
+                    <td class="zakladTableNazwa">Zakład Analizy Matematycznej</td>
+                </tr>
+                <tr>
+                    <td class="zakladTableKierownik">Kierownik: dr hab. inż. Paweł Kolwicz, profesor PP</td>
+                </tr>
+                </tbody>
+            </table></div>
+        <div class="grid-item"><table class="zakladTableButton" onclick="goToTable('Zaklad2')">
+                <tbody>
+                <tr>
+                    <td class="zakladTableSymbol" rowspan="2">Z2</td>
+                    <td class="zakladTableNazwa">Zakład Analizy Funkcjonalnej i Numerycznej</td>
+                </tr>
+                <tr>
+                    <td class="zakladTableKierownik">Kierownik: prof. dr hab. Ryszard Płuciennik</td>
+                </tr>
+                </tbody>
+            </table></div>
+        <div class="grid-item"><table class="zakladTableButton" onclick="goToTable('Zaklad3')">
+                <tbody>
+                <tr>
+                    <td class="zakladTableSymbol" rowspan="2">Z3</td>
+                    <td class="zakladTableNazwa">Zakład Równań Różniczkowych i Funkcyjnych</td>
+                </tr>
+                <tr>
+                    <td class="zakladTableKierownik">Kierownik: dr hab. Małgorzata Migda</td>
+                </tr>
+                </tbody>
+            </table></div>
+        <div class="grid-item"><table class="zakladTableButton" onclick="goToTable('Zaklad4')">
+                <tbody>
+                <tr>
+                    <td class="zakladTableSymbol" rowspan="2">Z4</td>
+                    <td class="zakladTableNazwa">Zakład Zastosowań Matematyki</td>
+                </tr>
+                <tr>
+                    <td class="zakladTableKierownik">Kierownik: prof. dr hab. inż. Ewa Magnucka-Blandzi</td>
+                </tr>
+                </tbody>
+            </table></div>
+    </div>
+
+    <table class="zakladTable" id="Zaklad1">
+        <tbody>
+        <tr>
+            <td class="zakladTablePuste"></td>
+            <td class="zakladTableNazwa" colspan="2">Zakład Analizy Matematycznej</td>
+            <td class="zakladTableSymbol" rowspan="2">Z1</td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="3">Kierownik:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">dr hab. inż.</td>
+            <td class="zakladTableWierszOstatni">Paweł Kolwicz</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Adiunkci:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr hab.</td>
+            <td class="zakladTableWiersz">Jan Milewski</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Ziemowit Domański</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">dr</td>
+            <td class="zakladTableWierszOstatni">Karol Leśnik</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Adiunkci dydaktyczni:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Marek Adamczak</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr inż.</td>
+            <td class="zakladTableWiersz">King Cichoń</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">dr inż.</td>
+            <td class="zakladTableWierszOstatni">Mariola Skorupka</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Asystenci:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">mgr</td>
+            <td class="zakladTableWiersz">Tomasz Kiwerski</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        </tbody>
+    </table>
+    <i class="arrow" onclick="window.scrollTo(0,0)"></i>
+    <table class="zakladTable" id="Zaklad2">
+        <tbody>
+        <tr>
+            <td class="zakladTablePuste"></td>
+            <td class="zakladTableNazwa" colspan="2">Zakład Analizy Funkcjonalnej i Numerycznej</td>
+            <td class="zakladTableSymbol" rowspan="2">Z2</td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="3">Kierownik:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">prof. dr hab.</td>
+            <td class="zakladTableWierszOstatni">Ryszard Płuciennik</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Profesorowie:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">prof. dr hab.</td>
+            <td class="zakladTableWierszOstatni">Lech Maligranda</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Adiunkci:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">dr hab.</td>
+            <td class="zakladTableWierszOstatni">Maciej Ciesielski</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Adiunkci dydaktyczni:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr inż.</td>
+            <td class="zakladTableWiersz">Anna Andruch-Sobiło</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Marian Dondajewski</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr inż.</td>
+            <td class="zakladTableWiersz">Karol Gajda</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Jacek Gruszka</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Marian Liskowski</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Piotr Rejmenciak</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr inż.</td>
+            <td class="zakladTableWiersz">Barbara Szyszka</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">dr inż.</td>
+            <td class="zakladTableWierszOstatni">Zenon Zbąszyniak</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Asystenci:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">mgr</td>
+            <td class="zakladTableWiersz">Marta Kańczurzewska</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">mgr</td>
+            <td class="zakladTableWiersz">Jakub Tomaszewski</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        </tbody>
+    </table>
+    <i class="arrow" onclick="window.scrollTo(0,0)"></i>
+    <table class="zakladTable" id="Zaklad3">
+        <tbody>
+        <tr>
+            <td class="zakladTablePuste"></td>
+            <td class="zakladTableNazwa" colspan="2">Zakład Równań Różniczkowych i Funkcyjnych</td>
+            <td class="zakladTableSymbol" rowspan="2">Z3</td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="3">Kierownik:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">dr hab.</td>
+            <td class="zakladTableWierszOstatni">Małgorzata Migda</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Adiunkci:</td>
+        </tr>
+
+        <tr>
+            <td class="zakladTableWierszOstatni"></td>
+            <td class="zakladTableWierszOstatni">dr</td>
+            <td class="zakladTableWierszOstatni">Alicja Dota</td>
+            <td class="zakladTableWierszOstatni"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableNaglowek" colspan="4">Adiunkci dydaktyczni:</td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Andrzej Drozdowicz</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Alina Gleska</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Grzegorz Grzegorczyk</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Wiesława Nowakowska</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr inż.</td>
+            <td class="zakladTableWiersz">Agnieszka Szawioła</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        <tr>
+            <td class="zakladTableWiersz"></td>
+            <td class="zakladTableWiersz">dr</td>
+            <td class="zakladTableWiersz">Małgorzata Zbąszyniak</td>
+            <td class="zakladTableWiersz"></td>
+        </tr>
+        </tbody>
+    </table>
+    <i class="arrow" onclick="window.scrollTo(0,0)"></i>
+<table class="zakladTable" id="Zaklad4">
+    <tbody>
+    <tr>
+        <td class="zakladTablePuste"></td>
+        <td class="zakladTableNazwa" colspan="2">Zakład Zastosowań Matematyki</td>
+        <td class="zakladTableSymbol" rowspan="2">Z4</td>
+    </tr>
+    <tr>
+        <td class="zakladTableNaglowek" colspan="3">Kierownik:</td>
+    </tr>
+    <tr>
+        <td class="zakladTableWierszOstatni"></td>
+        <td class="zakladTableWierszOstatni">prof. dr hab. inż.</td>
+        <td class="zakladTableWierszOstatni">Ewa Magnucka-Blandzi</td>
+        <td class="zakladTableWierszOstatni"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableNaglowek" colspan="4">Profesorowie uczelni:</td>
+    </tr>
+    <tr>
+        <td class="zakladTableWierszOstatni"></td>
+        <td class="zakladTableWierszOstatni">dr hab.</td>
+        <td class="zakladTableWierszOstatni">Karol Andrzejczak</td>
+        <td class="zakladTableWierszOstatni"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableNaglowek" colspan="4">Adiunkci:</td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">dr hab.</td>
+        <td class="zakladTableWiersz">Katarzyna Filipiak</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">dr</td>
+        <td class="zakladTableWiersz">Ewa Bakinowska</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">dr</td>
+        <td class="zakladTableWiersz">Kamil Świątek</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">dr</td>
+        <td class="zakladTableWiersz">Leszek Wittenbeck</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableWierszOstatni"></td>
+        <td class="zakladTableWierszOstatni">dr</td>
+        <td class="zakladTableWierszOstatni">Agnieszka Ziemkowska-Siwek</td>
+        <td class="zakladTableWierszOstatni"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableNaglowek" colspan="4">Adiunkci dydaktyczni:</td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">dr</td>
+        <td class="zakladTableWiersz">Anna Iwaszkiewicz-Rudoszańska</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">dr</td>
+        <td class="zakladTableWiersz">Barbara Popowska</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableWierszOstatni"></td>
+        <td class="zakladTableWierszOstatni">dr</td>
+        <td class="zakladTableWierszOstatni">Zbigniew Walczak</td>
+        <td class="zakladTableWierszOstatni"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableNaglowek" colspan="4">Asystenci:</td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">mgr</td>
+        <td class="zakladTableWiersz">Mateusz John</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">mgr</td>
+        <td class="zakladTableWiersz">Robert Salamon</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    <tr>
+        <td class="zakladTableWiersz"></td>
+        <td class="zakladTableWiersz">mgr inż.</td>
+        <td class="zakladTableWiersz">Marcin Stasiak</td>
+        <td class="zakladTableWiersz"></td>
+    </tr>
+    </tbody>
+</table>
+    <i class="arrow" onclick="window.scrollTo(0,0)"></i>
 
 </div>
 <div class="footer">

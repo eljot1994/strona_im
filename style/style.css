@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .favnav {
     list-style-type: none;
     background-color: #00507b;
@@ -62,6 +66,7 @@ body {
     display: block;
     float: left;
     width: auto;
+    color: white;
 }
 
 .logo_PP_WARiE{
@@ -80,7 +85,6 @@ body {
 }
 .menu{
     color: white;
-    height: 88px;
     position: sticky;
     top:0;
 
@@ -91,8 +95,8 @@ body {
     background-color: #00618d;
     overflow: auto;
 }
+
 .dropdown {
-    transition-duration: 0.5s;
     float: left;
     overflow: hidden;
     font-family: Cambria, serif;
@@ -101,8 +105,7 @@ body {
     width: 200px;
 }
 
-.dropdown .dropBtn{
-     transition-duration: 0.5s;
+.dropdown .dropdownButton{
      cursor: pointer;
      font: inherit;
      border: none;
@@ -117,7 +120,6 @@ body {
 
 
 .dropdown .dropBtn_fas{
-    transition-duration: 0.5s;
     cursor: pointer;
     font: inherit;
     border: none;
@@ -131,7 +133,6 @@ body {
 }
 
 .dropdown .dropList{
-    transition-duration: 0.5s;
     color: inherit;
     font: inherit;
     display: none;
@@ -144,49 +145,121 @@ body {
 
 }
 
-.dropdown .dropList a{
-    transition-duration: 0.5s;
-    color: inherit;
+.dropList button{
+    cursor: pointer;
+    color: white;
+    background-color: #00618d;
     font: inherit;
     float: none;
     padding: 12px 12px;
     text-decoration: none;
     display: block;
     text-align: left;
+    width: inherit;
+    border: none;
+    outline: none;
+
 }
 
-.dropdown:hover .dropList{
+.arrow {
+    float: right;
+    cursor: pointer;
+    border: solid #00618d;
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    margin-right: 22%;
+    padding: 8px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.arrow:hover{
+    border-color: #00507b;
     transition-duration: 0.5s;
-    display: block;
-}
+    transform: scale(1.1) rotate(-135deg);
+    box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2);
 
-.dropdown:hover .dropBtn, .dropList a:hover, .dropBtn_fas:hover{
+}
+.dropdown:hover .dropdownButton, .dropList button:hover, .dropBtn_fas:hover{
     transition-duration: 0.5s;
     background-color: #00507b;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 
 .secondary_menu{
     padding: 0 10%;
-    height: 50%;
     background-color: #00507b;
+    display: none;
+    width: inherit;
+    overflow: auto;
 }
 
+.secondary_menu button{
+    cursor: pointer;
+    transition-duration: 0.5s;
+    color: white;
+    background-color: #00507b;
+    font: inherit;
+    float: left;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width: 200px;
+    border: none;
+    outline: none;
+
+}
+
+.secondary_menu button:hover{
+    transition-duration: 0.5s;
+    color: #00507b;
+    background-color: white;
+}
 
 .content{
     height: auto;
+    margin: 0 10%;
 }
 
+.grid-container {
+    margin: 100px 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-item{
+    margin: 20px;
+}
+.grid-item a{text-decoration: none}
+.zakladTableButton {min-width:100%;min-height:100px;border-collapse:collapse; background-color:#00618d;border: solid 2px #00618d;color: white;cursor: pointer}
+.zakladTableButton:hover{transition-duration: 0.5s;background-color: #00507b;border-color: #00507b;transform: scale(1.05);box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);}
+.zakladTableButton td{padding:10px 5px;}
+.zakladTableButton th{padding:10px 5px;}
+.zakladTableButton .zakladTableNazwa{font-weight:bold;text-align:center;vertical-align:center}
+.zakladTableButton .zakladTableKierownik{text-align:left;vertical-align:center;color:black; background-color: white}
+.zakladTableButton .zakladTableSymbol{font-weight:bold;width:100px;text-align:center;vertical-align:center;font-size:30px}
+
+.zakladTable  {border-collapse:collapse;margin:400px auto 0 auto;width:700px}
+.zakladTable td{padding:10px 5px;word-break:normal;}
+.zakladTable th{padding:10px 5px;word-break:normal;}
+.zakladTable .zakladTablePuste {width: 150px}
+.zakladTable .zakladTableNazwa{background-color:#00618d;border-color:#00618d;color:#ffffff;font-weight:bold;text-align:center;vertical-align:center}
+.zakladTable .zakladTableSymbol{width:80px;font-size:30px;background-color:#00618d;border-color:#00618d;color:#ffffff;font-weight:bold;text-align:center;vertical-align:center}
+.zakladTable .zakladTableNaglowek{background-color:#00618d;border-color:#00618d;color:#ffffff;font-weight:bold;text-align:left;vertical-align:center}
+.zakladTable .zakladTableWiersz{border-bottom: solid 1px;text-align:left;vertical-align:top}
+.zakladTable .zakladTableWierszOstatni{text-align:left;vertical-align:top}
+
+
+
 .footer {
-    width: 100%;
     background-color: #00507b;
     text-align: left;
     color:white;
-    clear: both;
     font-size: 12px;
-    position: absolute;
-    height: fit-content;
     bottom: 0;
+    padding: 1px;
+    margin-top:30px;
 }
 
 @media screen and (max-width: 1400px) {

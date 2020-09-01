@@ -11,10 +11,10 @@
     <link rel="icon" type="image/x-icon" href="../image/logo_IM.png"/>
     <link rel="icon" href="../image/logo_IM.png" />
 </head>
-<body onload="openPage('NaukaIDydaktykaButton','secondary_menu_4','skryptyimonografieButton')">
+<body onload="openPage('AktualnosciButton','secondary_menu_6','aktualnosciButton')">
 <?php include('../main/menu.php');?>
 <div class="content">
-    Skrypty i monografie
+Aktualności
 </div>
 
 <div class="footer">

@@ -11,10 +11,10 @@
     <link rel="icon" type="image/x-icon" href="../image/logo_IM.png"/>
     <link rel="icon" href="../image/logo_IM.png" />
 </head>
-<body onload="openPage('NaukaIDydaktykaButton','secondary_menu_4','skryptyimonografieButton')">
+<body onload="openPage('SzkoleniaIKursyButton','secondary_menu_5','szkoleniaikursyButton')">
 <?php include('../main/menu.php');?>
 <div class="content">
-    Skrypty i monografie
+Szkolenia i kursy
 </div>
 
 <div class="footer">
