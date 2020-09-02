@@ -14,7 +14,7 @@
 <body onload="openPage('InstytutButton','secondary_menu_1','historiaButton')">
 <?php include('../main/menu.php');?>
 <div class="content">
-Historia
+
 </div>
 
 <div class="footer">

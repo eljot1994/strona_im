@@ -20,7 +20,7 @@ html {
     overflow: auto;
 }
 
-.favnav li{
+.favnav li {
     float: right;
 }
 
@@ -32,13 +32,13 @@ html {
     text-decoration: none;
 }
 
-.favnav li a:hover{
+.favnav li a:hover {
     background-color: #00618d;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 
-.header{
+.header {
     color: white;
     background-color: #00618d;
     margin: 0;
@@ -51,31 +51,32 @@ html {
     font-size: xx-large;
     margin-bottom: 25px;
 }
-.header h3{
+
+.header h3 {
     margin-top: -15px;
     font-size: large;
 }
 
-.logo_IM{
+.logo_IM {
     display: block;
     float: left;
     width: auto;
 }
 
-.name_IM{
+.name_IM {
     display: block;
     float: left;
     width: auto;
     color: white;
 }
 
-.logo_PP_WARiE{
+.logo_PP_WARiE {
     display: block;
     float: right;
     width: auto;
 }
 
-.header img{
+.header img {
     float: left;
     width: 120px;
     height: auto;
@@ -83,14 +84,15 @@ html {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.menu{
+
+.menu {
     color: white;
     position: sticky;
-    top:0;
+    top: 0;
 
 }
 
-.primary_menu{
+.primary_menu {
     padding: 0 10%;
     background-color: #00618d;
     overflow: auto;
@@ -105,21 +107,21 @@ html {
     width: 200px;
 }
 
-.dropdown .dropdownButton{
-     cursor: pointer;
-     font: inherit;
-     border: none;
-     outline: none;
-     color: inherit;
-     width: inherit;
-     padding: 12px 12px;
-     background-color: inherit;
-     margin: 0;
-     text-align: left;
- }
+.dropdown .dropdownButton {
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    outline: none;
+    color: inherit;
+    width: inherit;
+    padding: 12px 12px;
+    background-color: inherit;
+    margin: 0;
+    text-align: left;
+}
 
 
-.dropdown .dropBtn_fas{
+.dropdown .dropBtn_fas {
     cursor: pointer;
     font: inherit;
     border: none;
@@ -132,7 +134,7 @@ html {
     text-align: left;
 }
 
-.dropdown .dropList{
+.dropdown .dropList {
     color: inherit;
     font: inherit;
     display: none;
@@ -140,12 +142,12 @@ html {
     position: absolute;
     background-color: #00618d;
     min-width: inherit;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 
 }
 
-.dropList button{
+.dropList button {
     cursor: pointer;
     color: white;
     background-color: #00618d;
@@ -173,21 +175,22 @@ html {
     -webkit-transform: rotate(-135deg);
 }
 
-.arrow:hover{
+.arrow:hover {
     border-color: #00507b;
     transition-duration: 0.5s;
     transform: scale(1.1) rotate(-135deg);
-    box-shadow: 4px 4px 2px 0 rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.2);
 
 }
-.dropdown:hover .dropdownButton, .dropList button:hover, .dropBtn_fas:hover{
+
+.dropdown:hover .dropdownButton, .dropList button:hover, .dropBtn_fas:hover {
     transition-duration: 0.5s;
     background-color: #00507b;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 
-.secondary_menu{
+.secondary_menu {
     padding: 0 10%;
     background-color: #00507b;
     display: none;
@@ -195,7 +198,7 @@ html {
     overflow: auto;
 }
 
-.secondary_menu button{
+.secondary_menu button {
     cursor: pointer;
     transition-duration: 0.5s;
     color: white;
@@ -212,54 +215,160 @@ html {
 
 }
 
-.secondary_menu button:hover{
+.secondary_menu button:hover {
     transition-duration: 0.5s;
     color: #00507b;
     background-color: white;
 }
 
-.content{
+.content {
     height: auto;
     margin: 0 10%;
 }
 
 .grid-container {
-    margin: 100px 15%;
+    margin: 100px 10%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.grid-item{
-    margin: 20px;
+
+.grid-item {
+    margin: 30px;
 }
-.grid-item a{text-decoration: none}
-.zakladTableButton {min-width:100%;min-height:100px;border-collapse:collapse; background-color:#00618d;border: solid 2px #00618d;color: white;cursor: pointer}
-.zakladTableButton:hover{transition-duration: 0.5s;background-color: #00507b;border-color: #00507b;transform: scale(1.05);box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);}
-.zakladTableButton td{padding:10px 5px;}
-.zakladTableButton th{padding:10px 5px;}
-.zakladTableButton .zakladTableNazwa{font-weight:bold;text-align:center;vertical-align:center}
-.zakladTableButton .zakladTableKierownik{text-align:left;vertical-align:center;color:black; background-color: white}
-.zakladTableButton .zakladTableSymbol{font-weight:bold;width:100px;text-align:center;vertical-align:center;font-size:30px}
 
-.zakladTable  {border-collapse:collapse;margin:400px auto 0 auto;width:700px}
-.zakladTable td{padding:10px 5px;word-break:normal;}
-.zakladTable th{padding:10px 5px;word-break:normal;}
-.zakladTable .zakladTablePuste {width: 150px}
-.zakladTable .zakladTableNazwa{background-color:#00618d;border-color:#00618d;color:#ffffff;font-weight:bold;text-align:center;vertical-align:center}
-.zakladTable .zakladTableSymbol{width:80px;font-size:30px;background-color:#00618d;border-color:#00618d;color:#ffffff;font-weight:bold;text-align:center;vertical-align:center}
-.zakladTable .zakladTableNaglowek{background-color:#00618d;border-color:#00618d;color:#ffffff;font-weight:bold;text-align:left;vertical-align:center}
-.zakladTable .zakladTableWiersz{border-bottom: solid 1px;text-align:left;vertical-align:top}
-.zakladTable .zakladTableWierszOstatni{text-align:left;vertical-align:top}
+.grid-item a {
+    text-decoration: none
+}
 
+.zakladTableButton {
+    min-width: 100%;
+    min-height: 100px;
+    border-collapse: collapse;
+    background-color: #00618d;
+    border: solid 2px #00618d;
+    color: white;
+    cursor: pointer
+}
 
+.zakladTableButton:hover {
+    transition-duration: 0.5s;
+    background-color: #00507b;
+    border-color: #00507b;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.zakladTableButton td {
+    padding: 10px 5px;
+}
+
+.zakladTableButton th {
+    padding: 10px 5px;
+}
+
+.zakladTableButton .zakladTableNazwa {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center
+}
+
+.zakladTableButton .zakladTableKierownik {
+    text-align: left;
+    vertical-align: center;
+    color: black;
+    background-color: white
+}
+
+.zakladTableButton .zakladTableSymbol {
+    font-weight: bold;
+    width: 100px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 30px
+}
+
+.zakladTable {
+    border-collapse: collapse;
+    margin: 400px auto 0 auto;
+    width: 700px
+}
+
+.zakladTable td {
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.zakladTable th {
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.zakladTable .zakladTablePuste {
+    width: 150px
+}
+
+.zakladTable .zakladTableNazwa {
+    background-color: #00618d;
+    border-color: #00618d;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center
+}
+
+.zakladTable .zakladTableSymbol {
+    width: 80px;
+    font-size: 30px;
+    background-color: #00618d;
+    border-color: #00618d;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center
+}
+
+.zakladTable .zakladTableNaglowek {
+    background-color: #00618d;
+    border-color: #00618d;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: center
+}
+
+.zakladTable .zakladTableWiersz {
+    border-bottom: solid 1px;
+    text-align: left;
+    vertical-align: top
+}
+
+.zakladTable .zakladTableWierszOstatni {
+    text-align: left;
+    vertical-align: top
+}
+
+.skladTable  {border-collapse:collapse;margin: 30px auto 0 auto;}
+.skladTable td{padding:8px 10px;}
+.skladTable th{padding:8px 10px;}
+.skladTable .skladTableNaglowek{background-color:#00618d;border-color:inherit;color:#ffffff;font-weight:bold;text-align:left;vertical-align:top}
+.skladTable .skladTablePuste{border-color:#006100;text-align:left;vertical-align:top}
+.skladTable .skladTableWierszLiczby{border-color:inherit;text-align:center;vertical-align:top; border-bottom: solid 1px;}
+.skladTable .skladTableWierszLiczbyOstatni{border-color:inherit;text-align:center;vertical-align:top}
+.skladTable .skladTableNaglowekGlowny{background-color:#00618d;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+.skladTable .skladTableWierszLitery{text-align:left;vertical-align:top; border-bottom: solid 1px;}
+.skladTable .skladTableWierszLiteryOstatni{text-align:left;vertical-align:top;}
+
+.skladTable .skladTableWierszLitery a,.skladTable .skladTableWierszLiteryOstatni a{color: #00618d;}
+.skladTable .skladTableWierszLitery a:hover,.skladTable .skladTableWierszLiteryOstatni a:hover{color: #003158;}
 
 .footer {
     background-color: #00507b;
     text-align: left;
-    color:white;
+    color: white;
     font-size: 12px;
     bottom: 0;
     padding: 1px;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -272,7 +381,8 @@ html {
     .favnav li a {
         padding: 10px 10px;
     }
-    .logo_PP_WARiE{
+
+    .logo_PP_WARiE {
         display: none;
     }
 }
@@ -288,10 +398,12 @@ html {
     .favnav li a {
         padding: 10px 8px;
     }
-    .logo_IM{
+
+    .logo_IM {
         display: none;
     }
-    .header h1{
+
+    .header h1 {
         margin-top: 15px;
     }
 
@@ -301,10 +413,12 @@ html {
     .favnav li a {
         padding: 10px 7px;
     }
-    .favnav img{
+
+    .favnav img {
         display: none;
     }
-    .header h3{
+
+    .header h3 {
         display: none;
     }
 }
