@@ -13,17 +13,18 @@
 </head>
 <body onload="openPage('PracownicyButton','secondary_menu_2','skladaosobowyButton')">
 <?php include('../main/menu.php');?>
-<div class="content">
+<div class="content-table" >
     <table class="skladTable">
         <tbody>
-        <tr>
-            <td class="skladTablePuste"></td>
-            <td class="skladTablePuste"></td>
-            <td class="skladTableNaglowekGlowny">Zakład</td>
-            <td class="skladTableNaglowekGlowny">Pokój</td>
-            <td class="skladTableNaglowekGlowny">Telefon<br>(+48) 61-665-</td>
-            <td class="skladTableNaglowekGlowny">e-mail / www</td>
-        </tr>
+        <thead>
+            <th class="skladTablePusteGlowny"></th>
+            <th class="skladTablePusteGlowny"></th>
+            <th class="skladTableNaglowekGlowny">Zakład</th>
+            <th class="skladTableNaglowekGlowny">Pokój</th>
+            <th class="skladTableNaglowekGlowny">Telefon<br>(+48) 61-665-</th>
+            <th class="skladTableNaglowekGlowny">e-mail / www</th>
+
+        </thead>
         <tr>
             <td class="skladTableNaglowek" colspan="6">Profesorowie:</td>
         </tr>
@@ -234,7 +235,7 @@
             <td class="skladTableWierszLiczby">Z4</td>
             <td class="skladTableWierszLiczby">740</td>
             <td class="skladTableWierszLiczby">-2812</td>
-            <td class="skladTableWierszLitery"><a href="mailto:anna.iwaszkiewicz-rudoszanska@put.poznan.pl">anna.iwaszkiewicz-rudoszanska@put.poznan.pl</a><br><a href="anna.iwaszkiewicz-rudzoszanska.pracownik.put.poznan.pl">anna.iwaszkiewicz-rudzoszanska.pracownik.put.poznan.pl</a></td>
+            <td class="skladTableWierszLitery"><a href="mailto:anna.iwaszkiewicz-rudoszanska@put.poznan.pl">anna.iwaszkiewicz-rudoszanska@put.poznan.pl</a><br><a href="http://anna.iwaszkiewicz-rudzoszanska.pracownik.put.poznan.pl">anna.iwaszkiewicz-rudzoszanska.pracownik.put.poznan.pl</a></td>
         </tr>
         <tr>
             <td class="skladTableWierszLitery">dr</td>

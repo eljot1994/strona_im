@@ -226,6 +226,16 @@ html {
     margin: 0 10%;
 }
 
+
+.content-table {
+    position: relative;
+    z-index: -1;
+    margin-top: 30px;
+    overflow: auto;
+    height: 60vh;
+}
+
+
 .grid-container {
     margin: 100px 10%;
     display: grid;
@@ -347,28 +357,33 @@ html {
     vertical-align: top
 }
 
-.skladTable  {border-collapse:collapse;margin: 30px auto 0 auto;}
+.skladTable  {border-collapse:collapse;margin: 0 auto 0 auto;}
+.skladTable thead { position: sticky;top: 0;height: 60px}
 .skladTable td{padding:8px 10px;}
 .skladTable th{padding:8px 10px;}
-.skladTable .skladTableNaglowek{background-color:#00618d;border-color:inherit;color:#ffffff;font-weight:bold;text-align:left;vertical-align:top}
-.skladTable .skladTablePuste{border-color:#006100;text-align:left;vertical-align:top}
+.skladTable .skladTableNaglowek{background-color:#00618d;border-color:inherit;color:#ffffff;font-weight:bold;text-align:left;vertical-align:top;position: sticky;top:60px}
+.skladTable .skladTablePuste{border-color:#006100;text-align:left;vertical-align:top;}
 .skladTable .skladTableWierszLiczby{border-color:inherit;text-align:center;vertical-align:top; border-bottom: solid 1px;}
 .skladTable .skladTableWierszLiczbyOstatni{border-color:inherit;text-align:center;vertical-align:top}
-.skladTable .skladTableNaglowekGlowny{background-color:#00618d;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+
 .skladTable .skladTableWierszLitery{text-align:left;vertical-align:top; border-bottom: solid 1px;}
 .skladTable .skladTableWierszLiteryOstatni{text-align:left;vertical-align:top;}
-
 .skladTable .skladTableWierszLitery a,.skladTable .skladTableWierszLiteryOstatni a{color: #00618d;}
 .skladTable .skladTableWierszLitery a:hover,.skladTable .skladTableWierszLiteryOstatni a:hover{color: #003158;}
 
+.skladTable .skladTablePusteGlowny{border-color:#006100;text-align:left;vertical-align:top;background-color: white}
+.skladTable .skladTableNaglowekGlowny{background-color:#00618d;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top;}
+
 .footer {
     background-color: #00507b;
+    position: absolute;
     text-align: left;
     color: white;
     font-size: 12px;
     bottom: 0;
     padding: 1px;
     margin-top: 30px;
+    width: 100%;
 }
 
 @media screen and (max-width: 1400px) {
